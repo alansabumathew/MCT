@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playball&family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Mahima Charitable Trust</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="assets/Mahima_logo.png" alt="Mahima Logo" loading="lazy" />
+        </div>
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-links">
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="gallery-section-hero">
+        <h1>Gallery</h1>
+        <p class="gallery-section-hero__lead">
+          A glimpse of the people, moments, and work that keep Mahima moving forward.
+        </p>
+      </section>
+
+      <section class="gallery-section-grid-wrap">
+        <p id="gallery-error" class="gallery-msg gallery-msg--error" hidden></p>
+        <p id="gallery-empty" class="gallery-msg" hidden>No media to show yet.</p>
+        <div id="gallery-grid" class="gallery-grid" role="list"></div>
+      </section>
+    </main>
+
+    <div id="gallery-lightbox" class="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged media" hidden>
+      <button type="button" id="gallery-lightbox-close" class="gallery-lightbox__close" aria-label="Close">&times;</button>
+      <div class="gallery-lightbox__inner">
+        <img id="gallery-lightbox-img" src="" alt="" hidden />
+        <video id="gallery-lightbox-video" controls playsinline preload="metadata" hidden></video>
+        <p id="gallery-lightbox-caption" class="gallery-lightbox__caption"></p>
+      </div>
+    </div>
+
+    <footer>
+      <div id="footer"></div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+  </body>
+</html>
