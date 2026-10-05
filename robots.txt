@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /causes
+Disallow: /donate
 
 Sitemap: https://www.mahimacharitabletrust.org/sitemap.xml

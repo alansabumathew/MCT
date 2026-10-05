@@ -1,3 +1,23 @@
+// Feature flags: flip to true to bring the Donate pages back.
+const FEATURES = {
+  donate: false,
+};
+
+function applyFeatureFlags(root) {
+  if (FEATURES.donate) return;
+  root.querySelectorAll('a[href="donate"], a[href="donate.html"]').forEach(function (a) {
+    (a.closest('li') || a).remove();
+  });
+}
+
+if (!FEATURES.donate && /\/donate(\.html)?\/?$/.test(location.pathname)) {
+  location.replace('./');
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  applyFeatureFlags(document);
+});
+
 // Making Navbar Responsive
 $(document).ready(function () {
   $('.hamburger i').click(function () {
@@ -11,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     .then((response) => response.text())
     .then((data) => {
       document.getElementById('footer').innerHTML = data;
+      applyFeatureFlags(document.getElementById('footer'));
 
       // set current year
       const year = document.getElementById('year');
