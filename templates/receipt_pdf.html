@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { margin: 40px; }
+  body { font-family: DejaVu Sans, sans-serif; font-size: 12px; color: #222; }
+  .head { text-align: center; border-bottom: 3px solid #068d9d; padding-bottom: 12px; }
+  .head img { height: 80px; }
+  .head h1 { margin: 8px 0 2px; font-size: 20px; color: #068d9d; }
+  .head p { margin: 2px 0; font-size: 11px; color: #444; }
+  h2 { text-align: center; margin: 24px 0 16px; font-size: 16px; letter-spacing: 1px; }
+  table { width: 100%; border-collapse: collapse; }
+  td { border: 1px solid #ccc; padding: 9px; }
+  td.l { width: 35%; background: #f4f9fa; }
+  .note { margin-top: 24px; font-size: 10px; color: #555; line-height: 1.5; }
+  .sign { margin-top: 50px; text-align: right; font-size: 11px; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <img src="{{logo_src}}">
+    <h1>{{trust_name}}</h1>
+    <p>Reg. No. {{reg_no}}</p>
+    <p>{{address}}</p>
+    <p>{{trust_email}}</p>
+  </div>
+
+  <h2>DONATION RECEIPT</h2>
+
+  <table>
+    <tr><td class="l">Receipt No.</td><td><strong>{{receipt_no}}</strong></td></tr>
+    <tr><td class="l">Date</td><td>{{date}}</td></tr>
+    <tr><td class="l">Received from</td><td>{{name}}</td></tr>
+    <tr><td class="l">PAN</td><td>{{pan}}</td></tr>
+    <tr><td class="l">Phone</td><td>{{phone}}</td></tr>
+    <tr><td class="l">Email</td><td>{{email}}</td></tr>
+    <tr><td class="l">Amount received</td><td><strong>&#8377; {{amount}}</strong></td></tr>
+  </table>
+
+  <p class="note">{{tax_note}}</p>
+
+  <div class="sign">For {{trust_name}}<br><br>Authorised Signatory</div>
+</body>
+</html>

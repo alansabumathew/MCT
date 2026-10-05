@@ -1,0 +1,6 @@
+# Block private folders and files
+RedirectMatch 403 ^/(data|lib|templates|vendor|tools)(/|$)
+<FilesMatch "^(config(\.sample)?\.php|composer\.(json|lock)|\.gitignore)$">
+  Require all denied
+</FilesMatch>
+Options -Indexes

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playball&family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Donate | Mahima Charitable Trust</title>
+  </head>
+  <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/Mahima_logo.png" alt="Mahima Logo" loading="lazy">
+            </div>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="nav-links">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <!-- <li><a href="causes.html">Causes</a></li> -->
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+      <div class="donate-page">
+        <div class="donate-card donate-title">
+          <h1>Donation Form</h1>
+          <p>Thank you for supporting Mahima Charitable Trust. Please make your payment first, then fill in this form with the payment screenshot. Once we verify it, we will email you an 80G receipt.</p>
+          <p class="donate-required-note">* Indicates required question</p>
+        </div>
+
+        <form id="donate-form" novalidate>
+          <div class="donate-card" data-field="name">
+            <label for="name">Full Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Your answer" maxlength="100" autocomplete="name" />
+            <div class="donate-error">Please enter your name.</div>
+          </div>
+
+          <div class="donate-card" data-field="pan">
+            <label for="pan">PAN <span class="req">*</span></label>
+            <input type="text" id="pan" name="pan" placeholder="ABCDE1234F" maxlength="10" style="text-transform: uppercase" />
+            <div class="donate-error">Enter a valid 10-character PAN (e.g. ABCDE1234F).</div>
+          </div>
+
+          <div class="donate-card" data-field="phone">
+            <label for="phone">Phone Number <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" maxlength="10" inputmode="numeric" autocomplete="tel-national" />
+            <div class="donate-error">Enter a valid 10-digit mobile number.</div>
+          </div>
+
+          <div class="donate-card" data-field="email">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" maxlength="150" autocomplete="email" />
+            <div class="donate-error">Enter a valid email address.</div>
+          </div>
+
+          <div class="donate-card" data-field="amount">
+            <label for="amount">Amount Donated (&#8377;) <span class="req">*</span></label>
+            <input type="number" id="amount" name="amount" placeholder="Your answer" min="1" step="0.01" inputmode="decimal" />
+            <div class="donate-error">Enter the amount you donated.</div>
+          </div>
+
+          <div class="donate-card" data-field="screenshot">
+            <label for="screenshot">Payment acknowledgement screenshot <span class="req">*</span></label>
+            <p class="donate-hint">Upload an image (JPG, PNG, WEBP) or PDF, up to 5 MB.</p>
+            <input type="file" id="screenshot" name="screenshot" accept="image/jpeg,image/png,image/webp,application/pdf" />
+            <div class="donate-error">Please upload a valid screenshot (JPG/PNG/WEBP/PDF, max 5 MB).</div>
+          </div>
+
+          <div class="donate-card" data-field="cause">
+            <label for="cause">Suggestion for a cause (optional)</label>
+            <textarea id="cause" name="cause" rows="3" placeholder="Your answer" maxlength="1000"></textarea>
+          </div>
+
+          <input type="text" name="website" class="donate-hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="donate-actions">
+            <button type="submit" id="donate-submit">Submit</button>
+            <span id="donate-status" role="status"></span>
+          </div>
+        </form>
+
+        <div class="donate-card donate-success" id="donate-success" hidden>
+          <h2>Thank you!</h2>
+          <p>Your response has been recorded. A confirmation email is on its way, and we will send your receipt once the donation is verified.</p>
+          <a href="donate.html">Submit another response</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div id="footer"></div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    <script src="donate.js"></script>
+  </body>
+</html>
