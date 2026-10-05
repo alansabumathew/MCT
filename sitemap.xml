@@ -7,37 +7,37 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.mahimacharitabletrust.org/about.html</loc>
+    <loc>https://www.mahimacharitabletrust.org/about</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mahimacharitabletrust.org/gallery.html</loc>
+    <loc>https://www.mahimacharitabletrust.org/gallery</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mahimacharitabletrust.org/contact.html</loc>
+    <loc>https://www.mahimacharitabletrust.org/contact</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mahimacharitabletrust.org/donate.html</loc>
+    <loc>https://www.mahimacharitabletrust.org/donate</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mahimacharitabletrust.org/privacy.html</loc>
+    <loc>https://www.mahimacharitabletrust.org/privacy</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.mahimacharitabletrust.org/terms.html</loc>
+    <loc>https://www.mahimacharitabletrust.org/terms</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

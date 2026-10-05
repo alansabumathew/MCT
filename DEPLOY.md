@@ -13,4 +13,4 @@ The whole site (static pages + PHP) deploys as one unit to any PHP 8+ host (need
    - If the OAuth consent screen is in "Testing" mode the token expires after 7 days; publish the app (or set it to "In production") for a permanent token.
 4. **Admin password**: `php tools/make_admin_hash.php "your-password"` and paste the result into `config.php` under `admins`.
 5. **Upload everything** (including `vendor/` and `config.php`) to the host. Make sure HTTPS is on and the `.htaccess` is honoured (Apache). On nginx, add equivalent deny rules for `/data`, `/lib`, `/templates`, `/vendor`, `/tools` and `config.php`.
-6. Test: submit the form at `/donate.html`, then log in at `/admin/login.php` and approve it.
+6. Test: submit the form at `/donate`, then log in at `/admin/login.php` and approve it.
